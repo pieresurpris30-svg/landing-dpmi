@@ -7,13 +7,12 @@
   <meta name="description" content="Convertimos tus clics en clientes con infraestructura de datos blindada. Tráfico Pago Premium, Píxeles, CAPI y Optimización de ROI." />
 
   <!-- ═══════════════════════════════════════════════════
-       GOOGLE TAG MANAGER — HEAD
+       GOOGLE TAG MANAGER — HEAD (PROTEGIDO)
   ═══════════════════════════════════════════════════ -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PJ3WK8J3');</script>
 
   <!-- ═══════════════════════════════════════════════════
        ESPACIO PARA PÍXEL META
-       Descomenta y reemplaza YOUR_PIXEL_ID
   ═══════════════════════════════════════════════════ -->
   <!--
   <script>
@@ -31,7 +30,6 @@
 
   <!-- ═══════════════════════════════════════════════════
        ESPACIO PARA PÍXEL TIKTOK
-       Descomenta y reemplaza YOUR_TIKTOK_PIXEL_ID
   ═══════════════════════════════════════════════════ -->
   <!--
   <script>
@@ -50,7 +48,6 @@
 
   <!-- ═══════════════════════════════════════════════════
        ESPACIO PARA GOOGLE ADS
-       Descomenta y reemplaza AW-XXXXXXXXXX
   ═══════════════════════════════════════════════════ -->
   <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
@@ -64,572 +61,518 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:        #050D1A;
-      --navy-mid:    #091526;
-      --navy-light:  #0F2044;
-      --navy-card:   #0C1C38;
-      --navy-border: rgba(74,158,255,0.16);
-      --silver:      #C8D4E8;
-      --silver-hi:   #EDF2FA;
-      --chrome:      #8FA8C8;
-      --accent:      #4A9EFF;
-      --accent-dk:   #2270C8;
-      --accent-glow: rgba(74,158,255,0.18);
+      --navy:        #002347;
+      --navy-deep:   #001830;
+      --navy-mid:    #00305e;
+      --navy-card:   #002d5a;
+      --navy-border: rgba(192,192,192,0.12);
+      --silver:      #C0C0C0;
+      --silver-hi:   #F0F4FA;
+      --silver-dim:  #8A9AB5;
+      --accent:      #C0C0C0;
+      --accent-blue: #4A9EFF;
+      --accent-glow: rgba(74,158,255,0.15);
       --green:       #25D366;
-      --green-dk:    #128C7E;
-      --radius-sm:   8px;
-      --radius:      14px;
-      --radius-lg:   20px;
-      --ease:        0.28s cubic-bezier(.4,0,.2,1);
+      --green-dk:    #1aae50;
+      --danger:      #E24B4A;
+      --success:     #3dbe77;
+      --r:           0.75rem;
+      --r-lg:        1.25rem;
+      --ease:        0.26s cubic-bezier(.4,0,.2,1);
+      --font-display: 'Syne', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      background: var(--navy);
+      font-family: var(--font-body);
+      background: var(--navy-deep);
       color: var(--silver);
       line-height: 1.7;
       overflow-x: hidden;
     }
 
-    /* ─── LAYOUT ─── */
-    .container { width: 92%; max-width: 1100px; margin: 0 auto; }
-
-    /* ─── TIPOGRAFÍA UTILITARIA ─── */
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid rgba(74,158,255,0.35);
-      border-radius: 30px;
-      padding: 5px 16px;
-      margin-bottom: 1.3rem;
-    }
-    .section-title {
-      font-size: clamp(1.6rem, 3.2vw, 2.4rem);
-      font-weight: 900;
-      color: var(--silver-hi);
-      line-height: 1.18;
-      margin-bottom: 0.9rem;
-    }
-    .section-desc {
-      font-size: 0.95rem;
-      color: var(--chrome);
-      font-weight: 300;
-      max-width: 540px;
-      margin: 0 auto;
-    }
-    .text-center { text-align: center; }
+    .container { width: 92%; max-width: 1280px; margin: 0 auto; }
 
     /* ─── HEADER ─── */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      background: rgba(5,13,26,0.92);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      position: sticky; top: 0; z-index: 300;
+      background: rgba(0,24,48,0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--navy-border);
     }
     .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.1rem 0;
-      gap: 1rem;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 0; gap: 1rem;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-    }
-    .brand img { display: block; height: 48px; width: auto; }
-    .brand-text { display: flex; flex-direction: column; }
+    .brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .brand img { display: block; height: 44px; width: auto; }
     .brand-name {
-      font-size: 1.25rem;
-      font-weight: 900;
-      color: var(--silver-hi);
-      letter-spacing: 0.03em;
-      line-height: 1.1;
+      font-family: var(--font-display);
+      font-size: 1.3rem; font-weight: 800;
+      color: var(--silver-hi); letter-spacing: 0.02em; line-height: 1.1;
     }
-    .brand-name span { color: var(--accent); }
+    .brand-name span { color: var(--accent-blue); }
     .brand-slogan {
-      font-size: 0.6rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--chrome);
+      font-size: 0.58rem; font-weight: 500; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--silver-dim);
     }
     .header-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--green);
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      padding: 0.6rem 1.4rem;
-      border-radius: 50px;
-      transition: var(--ease);
-      white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green); color: #fff;
+      font-family: var(--font-display); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.05em; text-decoration: none;
+      padding: 0.6rem 1.4rem; border-radius: 50px;
+      transition: var(--ease); white-space: nowrap;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.25);
     }
     .header-cta:hover { background: var(--green-dk); transform: translateY(-2px); }
-    .header-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .header-cta svg { width: 15px; height: 15px; flex-shrink: 0; }
 
     /* ─── HERO ─── */
     #hero {
       position: relative;
-      padding: 8rem 0 7rem;
-      text-align: center;
+      padding: 9rem 0 8rem;
       overflow: hidden;
     }
-    #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
+    .hero-bg {
+      position: absolute; inset: 0; pointer-events: none;
       background:
-        radial-gradient(ellipse 80% 55% at 50% -10%, rgba(74,158,255,0.14) 0%, transparent 68%),
-        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(74,158,255,0.06) 0%, transparent 60%);
-      pointer-events: none;
+        radial-gradient(ellipse 90% 60% at 50% -5%, rgba(74,158,255,0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 90% 90%, rgba(192,192,192,0.05) 0%, transparent 60%);
     }
-    /* Grid de puntos decorativos */
-    #hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(rgba(74,158,255,0.12) 1px, transparent 1px);
-      background-size: 36px 36px;
-      mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 0%, transparent 80%);
-      pointer-events: none;
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(74,158,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,158,255,0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 0%, transparent 80%);
     }
-    .hero-content { position: relative; z-index: 1; }
-    .hero-title {
-      font-size: clamp(2.1rem, 5.5vw, 3.8rem);
-      font-weight: 900;
-      color: var(--silver-hi);
-      line-height: 1.12;
-      max-width: 860px;
-      margin: 0 auto 1.4rem;
-      letter-spacing: -0.01em;
+    .hero-content { position: relative; z-index: 1; max-width: 820px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-body); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent-blue);
+      border: 1px solid rgba(74,158,255,0.3);
+      border-radius: 30px; padding: 5px 16px; margin-bottom: 1.5rem;
     }
-    .hero-title em {
-      font-style: normal;
-      color: var(--accent);
+    .eyebrow-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent-blue);
+      animation: blink 1.8s ease-in-out infinite;
     }
-    .hero-sub {
-      font-size: 1.05rem;
-      color: var(--chrome);
-      font-weight: 300;
-      max-width: 580px;
-      margin: 0 auto 3rem;
-    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
 
-    /* ─── BOTÓN CTA PRINCIPAL ─── */
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 800; color: var(--silver-hi); line-height: 1.1;
+      letter-spacing: -0.02em; margin-bottom: 1.5rem;
+    }
+    .hero-title em { font-style: normal; color: var(--accent-blue); }
+    .hero-title .line-silver { color: var(--silver); }
+    .hero-sub {
+      font-size: 1.05rem; color: var(--silver-dim); font-weight: 300;
+      max-width: 600px; margin-bottom: 2.8rem; line-height: 1.75;
+    }
+    .hero-sub strong { color: var(--silver-hi); font-weight: 500; }
+
     .btn-wa {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--green);
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-decoration: none;
-      padding: 1.15rem 2.8rem;
-      border-radius: 60px;
-      border: none;
-      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--green); color: #fff;
+      font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+      letter-spacing: 0.04em; text-decoration: none;
+      padding: 1.1rem 2.6rem; border-radius: 60px; border: none; cursor: pointer;
       transition: var(--ease);
-      box-shadow: 0 0 40px rgba(37,211,102,0.28), 0 4px 20px rgba(37,211,102,0.18);
+      box-shadow: 0 0 0 0 rgba(37,211,102,0.4), 0 8px 32px rgba(37,211,102,0.28);
+      animation: pulse-btn 2.8s ease-in-out infinite;
     }
     .btn-wa:hover {
-      background: var(--green-dk);
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 0 55px rgba(37,211,102,0.38), 0 8px 28px rgba(37,211,102,0.22);
+      background: var(--green-dk); transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 0 10px rgba(37,211,102,0), 0 12px 36px rgba(37,211,102,0.35);
+      animation: none;
     }
-    .btn-wa svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .btn-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
+    @keyframes pulse-btn {
+      0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.35), 0 8px 32px rgba(37,211,102,0.28); }
+      60%  { box-shadow: 0 0 0 14px rgba(37,211,102,0), 0 8px 32px rgba(37,211,102,0.28); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 8px 32px rgba(37,211,102,0.28); }
+    }
 
     .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-top: 2.8rem;
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2.5rem;
     }
     .badge {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--chrome);
-      border: 1px solid rgba(74,158,255,0.2);
-      border-radius: 30px;
-      padding: 5px 14px;
-      background: rgba(74,158,255,0.06);
+      font-size: 0.65rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--silver-dim);
+      border: 1px solid rgba(192,192,192,0.18);
+      border-radius: 30px; padding: 5px 14px;
+      background: rgba(0,45,90,0.6);
+      transition: var(--ease);
     }
+    .badge:hover { border-color: rgba(74,158,255,0.4); color: var(--silver-hi); }
 
-    /* ─── STATS STRIP ─── */
+    .trust-strip {
+      display: flex; align-items: center; gap: 1.5rem;
+      margin-top: 3rem; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 0.78rem; color: var(--silver-dim); font-weight: 400;
+    }
+    .trust-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(37,211,102,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; color: var(--success); flex-shrink: 0;
+    }
+    .trust-sep { width: 1px; height: 20px; background: var(--navy-border); }
+
+    /* ─── PAIN SECTION ─── */
+    #dolor {
+      padding: 6rem 0;
+      background: var(--navy);
+      border-top: 1px solid var(--navy-border);
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem; align-items: center;
+    }
+    .section-eyebrow {
+      display: inline-block; font-size: 0.63rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--danger); border: 1px solid rgba(226,75,74,0.3);
+      border-radius: 30px; padding: 4px 14px; margin-bottom: 1.2rem;
+    }
+    .section-eyebrow.blue { color: var(--accent-blue); border-color: rgba(74,158,255,0.3); }
+    .section-eyebrow.silver { color: var(--silver); border-color: rgba(192,192,192,0.3); }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800;
+      color: var(--silver-hi); line-height: 1.15; margin-bottom: 1rem;
+    }
+    .section-desc { font-size: 0.95rem; color: var(--silver-dim); font-weight: 300; line-height: 1.75; }
+
+    .pain-bullets { margin-top: 1.8rem; display: flex; flex-direction: column; gap: 1rem; }
+    .pain-bullet {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 1rem 1.2rem;
+      background: rgba(226,75,74,0.06);
+      border: 1px solid rgba(226,75,74,0.15);
+      border-radius: var(--r);
+      transition: var(--ease);
+    }
+    .pain-bullet:hover { border-color: rgba(226,75,74,0.3); }
+    .pain-icon {
+      width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px;
+      background: rgba(226,75,74,0.12);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pain-icon svg { width: 18px; height: 18px; }
+    .pain-bullet-title { font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--silver-hi); margin-bottom: 3px; }
+    .pain-bullet-desc { font-size: 0.78rem; color: var(--silver-dim); line-height: 1.6; }
+
+    /* ─── STATS ─── */
     #stats {
-      padding: 3.5rem 0;
-      background: var(--navy-mid);
+      padding: 5rem 0;
+      background: var(--navy-deep);
       border-top: 1px solid var(--navy-border);
       border-bottom: 1px solid var(--navy-border);
     }
     .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 1rem;
-      text-align: center;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px; background: var(--navy-border); border-radius: var(--r-lg); overflow: hidden;
     }
     .stat {
-      padding: 1.6rem 1rem;
-      border: 1px solid var(--navy-border);
-      border-radius: var(--radius);
-      background: rgba(74,158,255,0.04);
+      padding: 2.5rem 2rem; text-align: center;
+      background: var(--navy);
       transition: var(--ease);
     }
-    .stat:hover { border-color: rgba(74,158,255,0.38); transform: translateY(-3px); }
+    .stat:hover { background: rgba(0,45,90,0.9); }
     .stat-num {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: var(--accent);
-      line-height: 1;
-      margin-bottom: 0.4rem;
+      font-family: var(--font-display);
+      font-size: 3rem; font-weight: 800;
+      color: var(--accent-blue); line-height: 1; margin-bottom: 0.5rem;
     }
-    .stat-lbl {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--chrome);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
+    .stat-lbl { font-size: 0.7rem; font-weight: 500; color: var(--silver-dim); text-transform: uppercase; letter-spacing: 0.12em; }
 
-    /* ─── SERVICIOS ─── */
-    #servicios {
+    /* ─── CAPI CONTRAST ─── */
+    #capi {
       padding: 7rem 0;
       background: var(--navy);
     }
-    .section-header { margin-bottom: 3.8rem; }
+    .capi-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3rem; align-items: center;
+    }
+    .capi-card {
+      background: var(--navy-deep);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+    }
+    .capi-card-header {
+      padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid var(--navy-border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-r { background: #ff5f57; }
+    .dot-y { background: #ffbd2e; }
+    .dot-g { background: #28c840; }
+    .capi-card-label { font-size: 0.7rem; color: var(--silver-dim); letter-spacing: 0.1em; text-transform: uppercase; margin-left: auto; }
+
+    .capi-comparison {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .capi-col {
+      padding: 1.8rem 1.5rem;
+    }
+    .capi-col + .capi-col { border-left: 1px solid var(--navy-border); }
+    .capi-col-label {
+      font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .capi-col-label.red { color: var(--danger); }
+    .capi-col-label.green { color: var(--success); }
+    .capi-num {
+      font-family: var(--font-display); font-size: 3rem; font-weight: 800; line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .capi-num.red { color: var(--danger); }
+    .capi-num.green { color: var(--success); }
+    .capi-unit { font-size: 0.75rem; color: var(--silver-dim); margin-bottom: 1rem; }
+    .capi-bar-wrap { height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+    .capi-bar { height: 100%; border-radius: 3px; }
+    .capi-bar.red { background: var(--danger); width: 3%; }
+    .capi-bar.green { background: var(--success); width: 100%; }
+
+    .capi-caption {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--navy-border);
+      font-size: 0.75rem; color: var(--silver-dim); line-height: 1.6;
+      font-style: italic;
+    }
+    .capi-caption strong { color: var(--success); font-style: normal; }
+
+    .capi-text { }
+    .capi-benefit {
+      display: flex; gap: 1rem; margin-top: 1.5rem; align-items: flex-start;
+      padding: 1.1rem 1.2rem;
+      background: rgba(0,45,90,0.5);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--r);
+      transition: var(--ease);
+    }
+    .capi-benefit:hover { border-color: rgba(74,158,255,0.3); }
+    .capi-benefit-icon {
+      width: 38px; height: 38px; flex-shrink: 0; border-radius: 9px;
+      background: rgba(74,158,255,0.1); border: 1px solid rgba(74,158,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .capi-benefit-icon svg { width: 18px; height: 18px; }
+    .capi-benefit-title { font-family: var(--font-display); font-size: 0.88rem; font-weight: 700; color: var(--silver-hi); margin-bottom: 3px; }
+    .capi-benefit-desc { font-size: 0.78rem; color: var(--silver-dim); line-height: 1.6; }
+
+    /* ─── SERVICIOS ─── */
+    #servicios { padding: 7rem 0; background: var(--navy-deep); }
+    .text-center { text-align: center; }
+    .section-header { margin-bottom: 4rem; }
+    .section-header .section-desc { max-width: 560px; margin: 0 auto; }
+
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-      gap: 1.4rem;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 1.2rem;
     }
     .card {
-      position: relative;
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: var(--radius);
-      padding: 2.2rem 1.8rem;
-      overflow: hidden;
-      transition: var(--ease);
-      cursor: default;
+      position: relative; background: var(--navy-card);
+      border: 1px solid var(--navy-border); border-radius: var(--r-lg);
+      padding: 2rem 1.8rem; overflow: hidden; transition: var(--ease);
     }
     .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
-      opacity: 0;
-      transition: var(--ease);
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+      opacity: 0; transition: var(--ease);
     }
-    .card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, var(--accent-glow) 0%, transparent 70%);
-      opacity: 0;
-      transition: var(--ease);
-      pointer-events: none;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(74,158,255,0.38);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-    }
+    .card:hover { transform: translateY(-5px); border-color: rgba(74,158,255,0.3); box-shadow: 0 24px 48px rgba(0,0,0,0.35); }
     .card:hover::before { opacity: 1; }
-    .card:hover::after  { opacity: 1; }
-    .card-inner { position: relative; z-index: 1; }
     .card-icon {
-      width: 54px; height: 54px;
-      border-radius: var(--radius-sm);
-      background: rgba(74,158,255,0.1);
-      border: 1px solid rgba(74,158,255,0.22);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.4rem;
-      transition: var(--ease);
+      width: 50px; height: 50px; border-radius: 12px;
+      background: rgba(74,158,255,0.08); border: 1px solid rgba(74,158,255,0.18);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 1.3rem;
     }
-    .card:hover .card-icon {
-      background: rgba(74,158,255,0.18);
-      border-color: rgba(74,158,255,0.45);
-    }
-    .card-icon svg { width: 26px; height: 26px; }
-    .card-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--silver-hi);
-      margin-bottom: 0.7rem;
-      line-height: 1.3;
-    }
-    .card-desc {
-      font-size: 0.85rem;
-      color: var(--chrome);
-      line-height: 1.7;
-      font-weight: 300;
-      margin-bottom: 1.2rem;
-    }
-    .pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
+    .card-icon svg { width: 24px; height: 24px; }
+    .card-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--silver-hi); margin-bottom: 0.65rem; line-height: 1.3; }
+    .card-desc { font-size: 0.83rem; color: var(--silver-dim); line-height: 1.7; font-weight: 300; margin-bottom: 1.2rem; }
+    .pills { display: flex; flex-wrap: wrap; gap: 5px; }
     .pill {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(74,158,255,0.1);
-      border: 1px solid rgba(74,158,255,0.22);
-      border-radius: 20px;
-      padding: 4px 10px;
+      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--accent-blue); background: rgba(74,158,255,0.08);
+      border: 1px solid rgba(74,158,255,0.2); border-radius: 20px; padding: 3px 10px;
     }
 
     /* ─── PROCESO ─── */
-    #proceso {
-      padding: 7rem 0;
-      background: var(--navy-mid);
-    }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-      gap: 1.4rem;
-      margin-top: 3.5rem;
-    }
+    #proceso { padding: 7rem 0; background: var(--navy); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1.5rem; margin-top: 3.5rem; }
     .step {
-      text-align: center;
-      padding: 2rem 1.4rem;
-      border: 1px solid var(--navy-border);
-      border-radius: var(--radius);
-      background: rgba(74,158,255,0.03);
-      position: relative;
+      text-align: center; padding: 2.2rem 1.5rem;
+      border: 1px solid var(--navy-border); border-radius: var(--r-lg);
+      background: rgba(0,48,94,0.4); position: relative; transition: var(--ease);
     }
+    .step:hover { transform: translateY(-4px); border-color: rgba(74,158,255,0.25); }
     .step-num {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: rgba(74,158,255,0.12);
-      border: 1.5px solid var(--accent);
+      font-family: var(--font-display);
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(74,158,255,0.1); border: 1.5px solid rgba(74,158,255,0.5);
       display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
-      font-weight: 900;
-      color: var(--accent);
+      font-size: 1rem; font-weight: 800; color: var(--accent-blue);
       margin: 0 auto 1.2rem;
     }
-    .step-title {
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--silver-hi);
-      margin-bottom: 0.5rem;
-    }
-    .step-desc {
-      font-size: 0.8rem;
-      color: var(--chrome);
-      font-weight: 300;
-      line-height: 1.65;
-    }
+    .step-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--silver-hi); margin-bottom: 0.5rem; }
+    .step-desc { font-size: 0.8rem; color: var(--silver-dim); font-weight: 300; line-height: 1.65; }
 
-    /* ─── CTA AUDITORÍA ─── */
+    /* ─── CTA FINAL ─── */
     #auditoria {
-      padding: 8rem 0;
-      background: var(--navy-light);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      padding: 9rem 0; background: var(--navy-deep); text-align: center;
+      position: relative; overflow: hidden;
     }
     #auditoria::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 65% 65% at 50% 100%, rgba(74,158,255,0.12) 0%, transparent 70%);
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 110%, rgba(74,158,255,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
-    #auditoria .section-desc { margin-bottom: 2.8rem; }
+    #auditoria::after {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(74,158,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,158,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .audit-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
     .audit-checks {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2.4rem;
+      display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2.5rem;
     }
     .chk {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--chrome);
+      display: flex; align-items: center; gap: 7px;
+      font-size: 0.78rem; font-weight: 400; color: var(--silver-dim);
     }
     .chk-icon {
-      width: 18px; height: 18px;
-      border-radius: 50%;
-      background: rgba(37,211,102,0.15);
+      width: 18px; height: 18px; border-radius: 50%;
+      background: rgba(37,211,102,0.12);
       display: flex; align-items: center; justify-content: center;
-      font-size: 0.65rem;
-      color: var(--green);
-      flex-shrink: 0;
+      font-size: 0.62rem; color: var(--success); flex-shrink: 0;
     }
 
     /* ─── FOOTER ─── */
     footer {
-      padding: 4rem 0 2.5rem;
-      background: var(--navy-mid);
+      padding: 4rem 0 2.5rem; background: var(--navy);
       border-top: 1px solid var(--navy-border);
     }
     .footer-top {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      margin-bottom: 3rem;
-      padding-bottom: 2.5rem;
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 2rem;
+      margin-bottom: 2.5rem; padding-bottom: 2.5rem;
       border-bottom: 1px solid var(--navy-border);
     }
     .footer-brand { display: flex; align-items: center; gap: 0.75rem; }
-    .footer-brand img { height: 40px; width: auto; }
-    .footer-tagline {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--chrome);
-      font-weight: 600;
-    }
-    .footer-logos {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1.6rem;
-    }
+    .footer-brand img { height: 38px; width: auto; }
+    .footer-tagline { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver-dim); font-weight: 500; }
+    .footer-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 1.8rem; }
     .f-logo {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--chrome);
-      opacity: 0.6;
-      transition: var(--ease);
-      text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--silver-dim); opacity: 0.5; transition: var(--ease); text-decoration: none;
     }
     .f-logo:hover { opacity: 1; color: var(--silver-hi); }
-    .f-logo svg { width: 18px; height: 18px; }
-    .footer-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .footer-copy {
-      font-size: 0.73rem;
-      color: rgba(143,168,200,0.45);
-    }
-    .footer-copy a { color: var(--accent); text-decoration: none; }
-    .footer-links {
-      display: flex;
-      gap: 1.2rem;
-    }
-    .footer-links a {
-      font-size: 0.73rem;
-      color: rgba(143,168,200,0.45);
-      text-decoration: none;
-      transition: var(--ease);
-    }
+    .f-logo svg { width: 16px; height: 16px; }
+    .footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+    .footer-copy { font-size: 0.72rem; color: rgba(143,168,200,0.4); }
+    .footer-copy a { color: var(--accent-blue); text-decoration: none; }
+    .footer-links { display: flex; gap: 1.2rem; }
+    .footer-links a { font-size: 0.72rem; color: rgba(143,168,200,0.4); text-decoration: none; transition: var(--ease); }
     .footer-links a:hover { color: var(--silver); }
 
-    /* ─── WHATSAPP FLOTANTE ─── */
+    /* ─── WA FLOTANTE ─── */
     .wa-float {
-      position: fixed;
-      bottom: 26px;
-      right: 24px;
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 8px;
+      position: fixed; bottom: 24px; right: 22px; z-index: 999;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
     }
     .wa-tooltip {
-      background: var(--navy-card);
-      border: 1px solid rgba(74,158,255,0.2);
-      color: var(--silver-hi);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      padding: 6px 14px;
-      border-radius: 30px;
-      white-space: nowrap;
-      opacity: 0;
-      transform: translateY(6px);
-      transition: var(--ease);
-      pointer-events: none;
+      background: var(--navy-card); border: 1px solid rgba(74,158,255,0.2);
+      color: var(--silver-hi); font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.05em; padding: 6px 14px; border-radius: 30px;
+      white-space: nowrap; opacity: 0; transform: translateY(6px);
+      transition: var(--ease); pointer-events: none;
     }
     .wa-float:hover .wa-tooltip { opacity: 1; transform: translateY(0); }
     .wa-bubble {
-      width: 64px; height: 64px;
-      border-radius: 50%;
-      background: var(--green);
+      width: 60px; height: 60px; border-radius: 50%; background: var(--green);
       display: flex; align-items: center; justify-content: center;
       text-decoration: none;
-      box-shadow: 0 4px 28px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.4);
-      animation: pulse-wa 2.4s ease-in-out infinite;
-      transition: background var(--ease), transform var(--ease);
+      box-shadow: 0 4px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.35);
+      animation: pulse-wa 2.4s ease-in-out infinite; transition: background var(--ease), transform var(--ease);
     }
-    .wa-bubble:hover {
-      background: var(--green-dk);
-      transform: scale(1.1);
-      animation: none;
-    }
-    .wa-bubble svg { width: 34px; height: 34px; }
+    .wa-bubble:hover { background: var(--green-dk); transform: scale(1.1); animation: none; }
+    .wa-bubble svg { width: 30px; height: 30px; }
     @keyframes pulse-wa {
-      0%   { box-shadow: 0 4px 28px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.35); }
-      60%  { box-shadow: 0 4px 28px rgba(37,211,102,0.45), 0 0 0 14px rgba(37,211,102,0); }
-      100% { box-shadow: 0 4px 28px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0); }
+      0%   { box-shadow: 0 4px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.3); }
+      60%  { box-shadow: 0 4px 24px rgba(37,211,102,0.4), 0 0 0 14px rgba(37,211,102,0); }
+      100% { box-shadow: 0 4px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); }
     }
 
+    /* ─── DIVIDER ─── */
+    .section-divider { width: 48px; height: 2px; background: var(--accent-blue); margin: 1.2rem 0; }
+    .section-divider.center { margin: 1.2rem auto; }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content > * { animation: fadeUp 0.7s var(--ease) both; }
+    .hero-content > *:nth-child(1) { animation-delay: 0.05s; }
+    .hero-content > *:nth-child(2) { animation-delay: 0.15s; }
+    .hero-content > *:nth-child(3) { animation-delay: 0.25s; }
+    .hero-content > *:nth-child(4) { animation-delay: 0.35s; }
+    .hero-content > *:nth-child(5) { animation-delay: 0.45s; }
+    .hero-content > *:nth-child(6) { animation-delay: 0.55s; }
+
     /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .pain-grid, .capi-inner { grid-template-columns: 1fr; }
+      .capi-inner { gap: 2rem; }
+    }
     @media (max-width: 640px) {
-      #hero { padding: 5.5rem 0 4.5rem; }
-      .hero-title { font-size: 2rem; }
-      .btn-wa { font-size: 1rem; padding: 1rem 2.2rem; }
+      #hero { padding: 6rem 0 4.5rem; }
+      .hero-title { font-size: 2.1rem; }
+      .btn-wa { font-size: 0.95rem; padding: 1rem 2rem; }
       .header-cta span { display: none; }
-      .wa-bubble { width: 56px; height: 56px; }
-      .wa-float { bottom: 18px; right: 16px; }
+      .wa-bubble { width: 54px; height: 54px; }
+      .wa-float { bottom: 16px; right: 16px; }
       .footer-top { flex-direction: column; align-items: flex-start; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
   <!-- ═══════════════════════════════════════════════════
-       GOOGLE TAG MANAGER — BODY (noscript)
+       GOOGLE TAG MANAGER — BODY (PROTEGIDO)
   ═══════════════════════════════════════════════════ -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ3WK8J3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
@@ -638,15 +581,15 @@
     <div class="container">
       <div class="header-inner">
         <a href="#hero" class="brand">
-          <img src="logo.png" alt="DPMI Services" height="48" />
-          <div class="brand-text">
-            <span class="brand-name">DPMI <span>Services</span></span>
-            <span class="brand-slogan">Soluciones en Datos</span>
+          <img src="logo.png" alt="DPMI Services" height="44" />
+          <div>
+            <div class="brand-name">DPMI <span>Services</span></div>
+            <div class="brand-slogan">Soluciones en Datos</div>
           </div>
         </a>
-        <a href="https://wa.me/5595991685683?text=Hola%2C%20quiero%20impulsar%20mis%20ventas%20con%20DPMI%20Services" class="header-cta" target="_blank" rel="noopener">
+        <a id="cta-header-wa" href="https://wa.me/5595991685683?text=Hola%20DPMI,%20vengo%20de%20la%20landing%20y%20quiero%20mi%20asesoria%20gratis" class="header-cta" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span>Contactar ahora</span>
+          <span>Asesoría gratis</span>
         </a>
       </div>
     </div>
@@ -654,27 +597,90 @@
 
   <!-- ══════════════ HERO ══════════════ -->
   <section id="hero">
-    <div class="container hero-content">
-      <span class="eyebrow">Agencia de Performance &amp; Datos</span>
-      <h1 class="hero-title">
-        Convertimos tus clics en clientes<br/>con <em>infraestructura de datos blindada</em>
-      </h1>
-      <p class="hero-sub">
-        Diseñamos ecosistemas de tracking y tráfico pago que maximizan cada peso invertido. Sin fugas de datos. Sin adivinanzas. Con resultados medibles desde el día uno.
-      </p>
-      <a href="https://wa.me/5595991685683?text=Hola%2C%20quiero%20impulsar%20mis%20ventas%20con%20DPMI%20Services" class="btn-wa" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Impulsa tus Ventas
-      </a>
-      <div class="hero-badges">
-        <span class="badge">Meta Ads</span>
-        <span class="badge">TikTok Ads</span>
-        <span class="badge">Google Ads</span>
-        <span class="badge">Pinterest</span>
-        <span class="badge">LinkedIn</span>
-        <span class="badge">CAPI</span>
-        <span class="badge">GTM Server Side</span>
-        <span class="badge">GA4</span>
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-dot"></span>Agencia de Performance &amp; Datos</div>
+        <h1 class="hero-title">
+          Deja de tomar decisiones<br/>
+          con el <em>3% de tus datos.</em><br/>
+          <span class="line-silver">Recupera el rastro de tus ventas en iPhone.</span>
+        </h1>
+        <p class="hero-sub">
+          Apple y los bloqueadores de anuncios te ocultan a tus clientes.<br/>
+          En DPMI instalamos la <strong>infraestructura de servidor</strong> que le devuelve la vista a tu algoritmo.
+        </p>
+        <a id="cta-hero-wa" href="https://wa.me/5595991685683?text=Hola%20DPMI,%20vengo%20de%20la%20landing%20y%20quiero%20mi%20asesoria%20gratis" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pide tu asesoría gratis
+        </a>
+        <div class="hero-badges">
+          <span class="badge">Meta Ads</span>
+          <span class="badge">TikTok Ads</span>
+          <span class="badge">Google Ads</span>
+          <span class="badge">Pinterest</span>
+          <span class="badge">LinkedIn</span>
+          <span class="badge">CAPI</span>
+          <span class="badge">GTM Server Side</span>
+          <span class="badge">GA4</span>
+        </div>
+        <div class="trust-strip">
+          <div class="trust-item"><span class="trust-icon">✓</span>Sin compromisos</div>
+          <div class="trust-sep"></div>
+          <div class="trust-item"><span class="trust-icon">✓</span>Respuesta en menos de 24h</div>
+          <div class="trust-sep"></div>
+          <div class="trust-item"><span class="trust-icon">✓</span>100% confidencial</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ DOLOR ══════════════ -->
+  <section id="dolor">
+    <div class="container">
+      <div class="pain-grid">
+        <div>
+          <span class="section-eyebrow">El problema real</span>
+          <div class="section-divider"></div>
+          <h2 class="section-title">Tu píxel está ciego.<br/>Tu presupuesto, desperdiciado.</h2>
+          <p class="section-desc">Cada día que tu algoritmo opera sin datos completos, estás pagando por optimización a ciegas. El resultado: CPA inflado, audiencias rotas y decisiones basadas en datos fantasma.</p>
+        </div>
+        <div class="pain-bullets">
+          <div class="pain-bullet">
+            <div class="pain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#E24B4A" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+              </svg>
+            </div>
+            <div>
+              <div class="pain-bullet-title">iOS 14+ y Safari te bloquean</div>
+              <div class="pain-bullet-desc">Hasta el 70% de tus conversiones en iPhone se pierden antes de llegar al píxel. El algoritmo de Meta no aprende de lo que no ve.</div>
+            </div>
+          </div>
+          <div class="pain-bullet">
+            <div class="pain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#E24B4A" stroke-width="2" stroke-linecap="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <div>
+              <div class="pain-bullet-title">Adblockers eliminan tu data</div>
+              <div class="pain-bullet-desc">El 40% de tus visitantes tienen bloqueadores activos. Cada uno de ellos es un potencial cliente que tu píxel no puede seguir ni segmentar.</div>
+            </div>
+          </div>
+          <div class="pain-bullet">
+            <div class="pain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#E24B4A" stroke-width="2" stroke-linecap="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="pain-bullet-title">ROI calculado sobre datos falsos</div>
+              <div class="pain-bullet-desc">Si tu plataforma solo ve el 30% de tus conversiones, tus decisiones de escala, pausa y presupuesto están fundamentalmente equivocadas.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -703,127 +709,159 @@
     </div>
   </section>
 
+  <!-- ══════════════ CAPI CONTRASTE ══════════════ -->
+  <section id="capi">
+    <div class="container">
+      <div class="capi-inner">
+        <div class="capi-card">
+          <div class="capi-card-header">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+            <span class="capi-card-label">Caso Real — Panel de Eventos Meta</span>
+          </div>
+          <div style="position:relative;overflow:hidden;">
+            <img
+              src="caso-real-capi.jpg"
+              alt="Panel de eventos Meta: 5 eventos del navegador vs 165 del servidor"
+              style="width:100%;display:block;filter:brightness(1.08) contrast(1.05);border-bottom:1px solid var(--navy-border);"
+            />
+            <div style="position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;align-items:center;gap:7px;background:rgba(0,24,48,0.82);backdrop-filter:blur(8px);border:1px solid rgba(226,75,74,0.35);border-radius:6px;padding:5px 10px;">
+                <span style="width:10px;height:10px;border-radius:2px;background:#4A6FA5;flex-shrink:0;display:inline-block;"></span>
+                <span style="font-size:0.65rem;color:#fff;font-family:var(--font-body);font-weight:500;">Navegador: <strong style="color:var(--danger);">5 eventos</strong></span>
+              </div>
+              <div style="display:flex;align-items:center;gap:7px;background:rgba(0,24,48,0.82);backdrop-filter:blur(8px);border:1px solid rgba(61,190,119,0.35);border-radius:6px;padding:5px 10px;">
+                <span style="width:10px;height:10px;border-radius:2px;background:#1ab8a8;flex-shrink:0;display:inline-block;"></span>
+                <span style="font-size:0.65rem;color:#fff;font-family:var(--font-body);font-weight:500;">Servidor CAPI: <strong style="color:var(--success);">165 eventos</strong></span>
+              </div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--navy-border);">
+            <div style="padding:1.2rem 1.4rem;">
+              <div class="capi-col-label red">Solo píxel · navegador</div>
+              <div class="capi-num red" style="font-size:2.5rem;">5</div>
+              <div class="capi-unit">eventos visibles</div>
+              <div class="capi-bar-wrap" style="margin-top:0.5rem;"><div class="capi-bar red"></div></div>
+            </div>
+            <div style="padding:1.2rem 1.4rem;border-left:1px solid var(--navy-border);">
+              <div class="capi-col-label green">Con DPMI CAPI · servidor</div>
+              <div class="capi-num green" style="font-size:2.5rem;">165</div>
+              <div class="capi-unit">eventos recuperados</div>
+              <div class="capi-bar-wrap" style="margin-top:0.5rem;"><div class="capi-bar green"></div></div>
+            </div>
+          </div>
+          <div class="capi-caption">
+            <strong>Rescatamos el rastro del 97% de su audiencia.</strong> Sin nuestra API de conversiones, este negocio tomaba decisiones con solo 5 señales. Con nuestra infraestructura de servidor, recuperamos 165 eventos reales — datos que el algoritmo ahora usa para optimizar.
+          </div>
+        </div>
+        <div class="capi-text">
+          <span class="section-eyebrow blue">La solución</span>
+          <div class="section-divider"></div>
+          <h2 class="section-title">Infraestructura que le devuelve la vista a tu algoritmo</h2>
+          <p class="section-desc">La API de Conversiones (CAPI) envía datos directamente desde tu servidor a Meta y TikTok, sin pasar por el navegador. Ningún bloqueador, ningún iOS te puede detener.</p>
+          <div class="capi-benefit">
+            <div class="capi-benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="1.8" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div>
+              <div class="capi-benefit-title">Optimización de presupuesto real</div>
+              <div class="capi-benefit-desc">El algoritmo aprende de datos limpios y completos. Menos desperdicio, mejor puja automática, escala rentable.</div>
+            </div>
+          </div>
+          <div class="capi-benefit">
+            <div class="capi-benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="1.8" stroke-linecap="round"><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/><path d="M7 10v4a2 2 0 002 2h5"/></svg>
+            </div>
+            <div>
+              <div class="capi-benefit-title">Audiencias de retargeting reales</div>
+              <div class="capi-benefit-desc">Reimpacta a quienes realmente vieron, añadieron al carrito o iniciaron el checkout. Sin eventos faltantes, sin audiencias vacías.</div>
+            </div>
+          </div>
+          <div class="capi-benefit">
+            <div class="capi-benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div>
+              <div class="capi-benefit-title">Escalabilidad sin cookies</div>
+              <div class="capi-benefit-desc">First-party data en tu propio servidor. Preparado para un mundo sin cookies de terceros. Tu negocio, a prueba de actualizaciones futuras.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════════ SERVICIOS ══════════════ -->
   <section id="servicios">
     <div class="container">
       <div class="section-header text-center">
-        <span class="eyebrow">Lo que hacemos</span>
+        <span class="section-eyebrow silver">Lo que hacemos</span>
+        <div class="section-divider center"></div>
         <h2 class="section-title">Servicios que cierran el ciclo completo</h2>
-        <p class="section-desc">Desde el primer clic hasta la venta registrada, cubrimos cada punto del embudo con tecnología y estrategia.</p>
+        <p class="section-desc">Desde el primer clic hasta la venta registrada, cubrimos cada punto del embudo con tecnología y estrategia de alto nivel.</p>
       </div>
       <div class="cards-grid">
 
-        <!-- Meta Ads -->
         <div class="card">
-          <div class="card-inner">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="#4A9EFF"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </div>
-            <h3 class="card-title">Meta Ads — Tráfico Premium</h3>
-            <p class="card-desc">Campañas de alto rendimiento en Facebook e Instagram con segmentación inteligente, creativos testeados y optimización continua para maximizar tu ROAS.</p>
-            <div class="pills">
-              <span class="pill">Facebook</span>
-              <span class="pill">Instagram</span>
-              <span class="pill">Reels Ads</span>
-              <span class="pill">Retargeting</span>
-            </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="#4A9EFF"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </div>
+          <div class="card-title">Meta Ads — Tráfico Premium</div>
+          <p class="card-desc">Campañas de alto rendimiento en Facebook e Instagram con segmentación inteligente, creativos testeados y optimización continua para maximizar tu ROAS.</p>
+          <div class="pills"><span class="pill">Facebook</span><span class="pill">Instagram</span><span class="pill">Reels Ads</span><span class="pill">Retargeting</span></div>
         </div>
 
-        <!-- TikTok Ads -->
         <div class="card">
-          <div class="card-inner">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="#4A9EFF"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-            </div>
-            <h3 class="card-title">TikTok Ads — Audiencias Masivas</h3>
-            <p class="card-desc">Estrategias de contenido pago para la plataforma de mayor crecimiento. Creativos nativos que convierten y segmentación basada en comportamiento real.</p>
-            <div class="pills">
-              <span class="pill">TopView</span>
-              <span class="pill">In-Feed Ads</span>
-              <span class="pill">Spark Ads</span>
-              <span class="pill">TikTok Shop</span>
-            </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="#4A9EFF"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
           </div>
+          <div class="card-title">TikTok Ads — Audiencias Masivas</div>
+          <p class="card-desc">Estrategias de contenido pago para la plataforma de mayor crecimiento. Creativos nativos que convierten y segmentación basada en comportamiento real.</p>
+          <div class="pills"><span class="pill">TopView</span><span class="pill">In-Feed Ads</span><span class="pill">Spark Ads</span><span class="pill">TikTok Shop</span></div>
         </div>
 
-        <!-- CAPI -->
         <div class="card">
-          <div class="card-inner">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                <path d="M9 12l2 2 4-4"/>
-              </svg>
-            </div>
-            <h3 class="card-title">CAPI — API de Conversiones</h3>
-            <p class="card-desc">Implementamos la API de Conversiones de Meta y TikTok en servidor, capturando el 100% de tus eventos aunque el usuario bloquee cookies o píxeles del navegador.</p>
-            <div class="pills">
-              <span class="pill">Meta CAPI</span>
-              <span class="pill">TikTok CAPI</span>
-              <span class="pill">Deduplicación</span>
-              <span class="pill">EMQ Score</span>
-            </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
+            </svg>
           </div>
+          <div class="card-title">CAPI — API de Conversiones</div>
+          <p class="card-desc">Implementamos la API de Conversiones de Meta y TikTok en servidor para capturar el 100% de tus eventos aunque el usuario bloquee cookies o píxeles del navegador.</p>
+          <div class="pills"><span class="pill">Meta CAPI</span><span class="pill">TikTok CAPI</span><span class="pill">Deduplicación</span><span class="pill">EMQ Score</span></div>
         </div>
 
-        <!-- GTM Server Side -->
         <div class="card">
-          <div class="card-inner">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="8" rx="2"/>
-                <rect x="2" y="14" width="20" height="8" rx="2"/>
-                <line x1="6" y1="6" x2="6.01" y2="6"/>
-                <line x1="6" y1="18" x2="6.01" y2="18"/>
-              </svg>
-            </div>
-            <h3 class="card-title">GTM Server Side</h3>
-            <p class="card-desc">Contenedor de Tag Manager en tu propio servidor para mayor privacidad, velocidad de carga y control total sobre qué datos se envían a cada plataforma.</p>
-            <div class="pills">
-              <span class="pill">Cloud Run</span>
-              <span class="pill">1st Party Data</span>
-              <span class="pill">GA4</span>
-              <span class="pill">Core Web Vitals</span>
-            </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
           </div>
+          <div class="card-title">GTM Server Side</div>
+          <p class="card-desc">Contenedor de Tag Manager en tu propio servidor para mayor privacidad, velocidad de carga y control total sobre qué datos se envían a cada plataforma.</p>
+          <div class="pills"><span class="pill">Cloud Run</span><span class="pill">1st Party Data</span><span class="pill">GA4</span><span class="pill">Core Web Vitals</span></div>
         </div>
 
-        <!-- Google Ads -->
         <div class="card">
-          <div class="card-inner">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="#4A9EFF"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" opacity=".8"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" opacity=".65"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" opacity=".9"/></svg>
-            </div>
-            <h3 class="card-title">Google Ads &amp; Analytics 4</h3>
-            <p class="card-desc">Search, Display, Shopping y Performance Max optimizados con datos de GA4. Configuramos conversiones, audiencias y estrategias de puja automatizadas basadas en señales reales.</p>
-            <div class="pills">
-              <span class="pill">Search</span>
-              <span class="pill">PMax</span>
-              <span class="pill">GA4</span>
-              <span class="pill">Smart Bidding</span>
-            </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="#4A9EFF"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" opacity=".8"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" opacity=".65"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" opacity=".9"/></svg>
           </div>
+          <div class="card-title">Google Ads &amp; Analytics 4</div>
+          <p class="card-desc">Search, Display, Shopping y Performance Max optimizados con datos de GA4. Configuramos conversiones, audiencias y estrategias de puja automatizadas basadas en señales reales.</p>
+          <div class="pills"><span class="pill">Search</span><span class="pill">PMax</span><span class="pill">GA4</span><span class="pill">Smart Bidding</span></div>
         </div>
 
-        <!-- ROI & Analytics -->
         <div class="card">
-          <div class="card-inner">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 3v18h18"/>
-                <path d="M7 16l4-6 4 4 4-7"/>
-              </svg>
-            </div>
-            <h3 class="card-title">Análisis de Datos &amp; ROI</h3>
-            <p class="card-desc">Dashboards en tiempo real, atribución multicanal y auditorías de cuenta. Identificamos exactamente dónde está tu dinero y cómo hacerlo crecer.</p>
-            <div class="pills">
-              <span class="pill">Looker Studio</span>
-              <span class="pill">BigQuery</span>
-              <span class="pill">Atribución</span>
-              <span class="pill">Reportes Custom</span>
-            </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/><path d="M7 16l4-6 4 4 4-7"/>
+            </svg>
           </div>
+          <div class="card-title">Análisis de Datos &amp; ROI</div>
+          <p class="card-desc">Dashboards en tiempo real, atribución multicanal y auditorías de cuenta. Identificamos exactamente dónde está tu dinero y cómo hacerlo crecer con datos, no intuición.</p>
+          <div class="pills"><span class="pill">Looker Studio</span><span class="pill">BigQuery</span><span class="pill">Atribución</span><span class="pill">Reportes Custom</span></div>
         </div>
 
       </div>
@@ -834,7 +872,8 @@
   <section id="proceso">
     <div class="container">
       <div class="section-header text-center">
-        <span class="eyebrow">Cómo trabajamos</span>
+        <span class="section-eyebrow blue">Cómo trabajamos</span>
+        <div class="section-divider center"></div>
         <h2 class="section-title">De cero a resultados en 4 pasos</h2>
       </div>
       <div class="steps">
@@ -864,22 +903,22 @@
 
   <!-- ══════════════ CTA AUDITORÍA ══════════════ -->
   <section id="auditoria">
-    <div class="container" style="position:relative;z-index:1;">
-      <div class="text-center">
-        <span class="eyebrow">Oferta sin costo</span>
+    <div class="container">
+      <div class="audit-inner">
+        <span class="section-eyebrow silver">Oferta sin costo</span>
+        <div class="section-divider center"></div>
         <h2 class="section-title">Obtén tu Auditoría Gratuita hoy</h2>
-        <p class="section-desc">Revisamos tu infraestructura de datos, píxeles y campañas actuales sin costo. Descubrirás exactamente cuánto dinero estás dejando sobre la mesa.</p>
-        <br/>
-        <a href="https://wa.me/5595991685683?text=Hola%2C%20quiero%20impulsar%20mis%20ventas%20con%20DPMI%20Services" class="btn-wa" target="_blank" rel="noopener" style="font-size:1rem;padding:1rem 2.4rem;">
-          <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <p class="section-desc" style="margin:0 auto 2.5rem;">Revisamos tu infraestructura de datos, píxeles y campañas actuales sin costo. Descubrirás exactamente cuánto dinero estás dejando sobre la mesa.</p>
+        <a id="cta-auditoria-wa" href="https://wa.me/5595991685683?text=Hola%20DPMI,%20vengo%20de%20la%20landing%20y%20quiero%20mi%20asesoria%20gratis" class="btn-wa" target="_blank" rel="noopener" style="font-size:0.95rem;padding:1rem 2.4rem;">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Quiero mi Auditoría Gratis
         </a>
         <div class="audit-checks">
-          <span class="chk"><span class="chk-icon">✓</span> Sin compromisos</span>
-          <span class="chk"><span class="chk-icon">✓</span> Respuesta en menos de 24h</span>
-          <span class="chk"><span class="chk-icon">✓</span> Análisis de píxeles &amp; CAPI</span>
-          <span class="chk"><span class="chk-icon">✓</span> Recomendaciones accionables</span>
-          <span class="chk"><span class="chk-icon">✓</span> 100% confidencial</span>
+          <span class="chk"><span class="chk-icon">✓</span>Sin compromisos</span>
+          <span class="chk"><span class="chk-icon">✓</span>Respuesta en menos de 24h</span>
+          <span class="chk"><span class="chk-icon">✓</span>Análisis de píxeles &amp; CAPI</span>
+          <span class="chk"><span class="chk-icon">✓</span>Recomendaciones accionables</span>
+          <span class="chk"><span class="chk-icon">✓</span>100% confidencial</span>
         </div>
       </div>
     </div>
@@ -890,33 +929,18 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="logo.png" alt="DPMI Services" height="40" />
+          <img src="logo.png" alt="DPMI Services" height="38" />
           <div>
-            <div style="font-size:1rem;font-weight:900;color:var(--silver-hi);">DPMI <span style="color:var(--accent)">Services</span></div>
+            <div style="font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--silver-hi);">DPMI <span style="color:var(--accent-blue)">Services</span></div>
             <div class="footer-tagline">Soluciones en Datos</div>
           </div>
         </div>
         <div class="footer-logos">
-          <span class="f-logo">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Meta
-          </span>
-          <span class="f-logo">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-            TikTok
-          </span>
-          <span class="f-logo">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            Google
-          </span>
-          <span class="f-logo">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-            Pinterest
-          </span>
-          <span class="f-logo">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </span>
+          <span class="f-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Meta</span>
+          <span class="f-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok</span>
+          <span class="f-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>Google</span>
+          <span class="f-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>Pinterest</span>
+          <span class="f-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</span>
         </div>
       </div>
       <div class="footer-bottom">
@@ -924,7 +948,7 @@
         <div class="footer-links">
           <a href="#">Privacidad</a>
           <a href="#">Términos</a>
-          <a href="https://wa.me/5595991685683?text=Hola%2C%20quiero%20impulsar%20mis%20ventas%20con%20DPMI%20Services" target="_blank" rel="noopener">Contacto</a>
+          <a href="https://wa.me/5595991685683?text=Hola%20DPMI,%20vengo%20de%20la%20landing%20y%20quiero%20mi%20asesoria%20gratis" target="_blank" rel="noopener">Contacto</a>
         </div>
       </div>
     </div>
@@ -932,9 +956,10 @@
 
   <!-- ══════════════ BOTÓN FLOTANTE WHATSAPP ══════════════ -->
   <div class="wa-float">
-    <span class="wa-tooltip">¡Hablemos ahora!</span>
-    <a class="wa-bubble"
-       href="https://wa.me/5595991685683?text=Hola%2C%20quiero%20impulsar%20mis%20ventas%20con%20DPMI%20Services"
+    <span class="wa-tooltip">¡Pide tu asesoría gratis!</span>
+    <a id="cta-float-wa"
+       class="wa-bubble"
+       href="https://wa.me/5595991685683?text=Hola%20DPMI,%20vengo%20de%20la%20landing%20y%20quiero%20mi%20asesoria%20gratis"
        target="_blank"
        rel="noopener"
        aria-label="Contactar por WhatsApp">
@@ -943,26 +968,4 @@
   </div>
 
 </body>
-</html>    
-
- 
-
- 
- 
-     
-    
-   
-   
-      
-     
-    
-   
-     
-     
-     
-      
-      
-     
-     
-      
-     
+</html>
